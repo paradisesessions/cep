@@ -1,0 +1,47 @@
+{
+    "name": "paradisesessions/cep",
+    "description": "Simple zip code consult with ViaCEP.",
+    "keywords": [
+        "cep",
+        "viacep",
+        "php8",
+        "php"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/paradisesessions/cep",
+    "authors": [
+        {
+            "name": "Matheus Bastos",
+            "email": "matsince1993@yahoo.com",
+            "homepage": "https://matsince1993.vercep.app",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ParadiseSessions\\Cep\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ParadiseSessions\\Cep\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.18"
+    },
+    "scripts": {
+        "test": [
+            "./vendor/bin/pest --colors=always"
+        ]
+    }
+}
