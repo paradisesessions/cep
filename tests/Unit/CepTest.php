@@ -1,10 +1,7 @@
 <?php
 
-/** Dependencies */
-use ParadiseSessions\Cep\Cep;
-
 test('tests whether the zip code is valid', function () {
-    $cep = new Cep();
+    $cep = new \ParadiseSessions\Cep\Cep();
     $test = $cep->consult('12345-678');
     expect($test)->not->toBeTrue();
     expect($cep->fail()->getCode())->toBe(200);
@@ -14,7 +11,7 @@ test('tests whether the zip code is valid', function () {
 });
 
 test('tests a valid zip code', function () {
-    $cep = new Cep();
+    $cep = new \ParadiseSessions\Cep\Cep();
     $test = $cep->consult('04538133');
     expect($test)->toBeTrue();
     expect($cep->format())->toBe('04538-133');

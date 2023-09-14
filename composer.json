@@ -40,8 +40,17 @@
         "pestphp/pest": "^2.18"
     },
     "scripts": {
-        "test": [
+        "pest": [
             "./vendor/bin/pest --colors=always"
+        ],
+        "pc": [
+            "./vendor/bin/pest --colors=always --compact"
+        ],
+        "pp": [
+            "./vendor/bin/pest --colors=always --profile"
+        ],
+        "ppt": [
+            "./vendor/bin/pest --colors=always --profile --todos"
         ]
     }
 }
