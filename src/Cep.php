@@ -132,6 +132,14 @@ class Cep
     }
 
     /**
+     * @return string
+     */
+    public function completeAddress(): string
+    {
+        return "{$this->address} {$this->complement}, {$this->city} - {$this->state}";
+    }
+
+    /**
      * @param string $cep
      * @return string
      */
