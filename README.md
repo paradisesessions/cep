@@ -45,12 +45,13 @@ Exemplo de uso para uma simples consulta.
 ```php
 $cep = new \ParadiseSessions\Cep\Cep();
 if (!$cep->consult('04538133')) {
-    echo $cep->fail()->getMessage();
+    exit($cep->fail()->getMessage());
 }
 
-print_r($cep->data());
+var_dump($cep->data());
 
-echo $cep->format();
+echo "<p>Address: {$cep->address} {$cep->complement}, {$cep->city} - {$cep->state}</p>";
+echo "<p>Zip code: {$cep->format()}";
 ```
 
 ###### \*you can pass the formatted zip code and it will work.
