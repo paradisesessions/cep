@@ -22,3 +22,12 @@ test('tests a valid zip code', function () {
         'locality' => 'São Paulo',
     ]);
 });
+
+test('test show complete address', function () {
+    $cep = new \ParadiseSessions\Cep\Cep();
+    $cep->consult('04538-133');
+
+    $address = 'Avenida Brigadeiro Faria Lima de 3253 ao fim - lado ímpar, Itaim Bibi - SP';
+
+    expect($cep->completeAddress())->toBe($address);
+});

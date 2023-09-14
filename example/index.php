@@ -16,6 +16,6 @@ if (!$cep->consult('04538-133')) {
 var_dump($cep->data());
 
 /** Make address */
-echo "<p>Address: {$cep->address} {$cep->complement}, {$cep->city} - {$cep->state}</p>";
+echo "<p>Address: {$cep->completeAddress()}</p>";
 /** Show formatted zip code */
 echo "<p>Zip code: {$cep->format()}";
